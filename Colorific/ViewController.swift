@@ -20,6 +20,14 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-
+  @IBAction func changeColor(sender: UIButton){
+    // generates random numbers
+    let r = CGFloat(arc4random() % 255)
+    let g = CGFloat(arc4random() % 255)
+    let b = CGFloat(arc4random() % 255)
+    // create color
+    let color = UIColor(red: (r/255.0), green: (g/255.0), blue: (b/255.0), alpha: 1.0)
+    // update view
+    view.backgroundColor = color
+  }
 }
-
